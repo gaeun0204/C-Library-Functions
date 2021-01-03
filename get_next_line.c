@@ -6,13 +6,14 @@
 /*   By: gaekim <gaekim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 17:00:51 by gaekim            #+#    #+#             */
-/*   Updated: 2021/01/03 18:34:42 by gaekim           ###   ########.fr       */
+/*   Updated: 2021/01/03 18:55:59 by gaekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include <limits.h>
+#define BUFFER_SIZE 1000000
 #include "libft.h"
 
 static void	ft_strfree(char **s)
