@@ -6,7 +6,7 @@
 /*   By: gaekim <gaekim@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 00:11:45 by gaekim            #+#    #+#             */
-/*   Updated: 2020/04/20 23:25:44 by gaekim           ###   ########.fr       */
+/*   Updated: 2021/01/03 18:31:09 by gaekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,7 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 		void (*del)(void *));
+
+int				get_next_line(int fd, char **line);
 
 #endif
