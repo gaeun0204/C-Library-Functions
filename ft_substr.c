@@ -6,7 +6,7 @@
 /*   By: gaekim <gaekim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/06 20:26:34 by gaekim            #+#    #+#             */
-/*   Updated: 2020/04/19 14:28:19 by gaekim           ###   ########.fr       */
+/*   Updated: 2021/01/03 18:27:21 by gaekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,23 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*p;
-	unsigned int	i;
-	unsigned int	p_size;
+	int		i;
+	char	*res;
 
-	i = 0;
-	p_size = 0;
-	if (start >= ft_strlen((char *)s))
-		return (ft_strdup(""));
-	else if (start < ft_strlen((char *)s) && start + len > ft_strlen((char *)s))
-		p_size = ft_strlen((char *)s) - start;
-	else if (start < ft_strlen((char *)s) && start + len < ft_strlen((char *)s))
-		p_size = len;
-	if (!(p = (char *)malloc((p_size + 1) * sizeof(char))))
-		return (NULL);
-	while (s[start + i] && i < len)
+	if (len == 0)
 	{
-		p[i] = s[start + i];
-		i++;
+		res = malloc(sizeof(char));
+		*res = 0;
+		return (res);
 	}
-	p[i] = '\0';
-	return (p);
+	if ((res = (char *)malloc(sizeof(char) * (len + 1))) == 0)
+		return (0);
+	i = 0;
+	if (start < (unsigned int)ft_strlen(s))
+	{
+		while (len--)
+			res[i++] = s[start++];
+	}
+	res[i] = '\0';
+	return (res);
 }
