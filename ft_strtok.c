@@ -6,9 +6,11 @@
 /*   By: gaekim <gaekim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 20:43:13 by gaekim            #+#    #+#             */
-/*   Updated: 2021/01/09 22:04:14 by gaekim           ###   ########.fr       */
+/*   Updated: 2021/01/09 22:25:58 by gaekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strtok(char *str, char sepa)
 {
